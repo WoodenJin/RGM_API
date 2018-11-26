@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<robot name="real_robot_v1.0">
+
+    <!--up body part-->
+    <link name="pelvis">
+        <visual>
+            <geometry>
+                <box size="0.135 0.07 0.135"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.135 0.07 0.135"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.208"/>
+            <inertia ixx="0.00286" iyy="0.004236" izz="0.003206" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="up_rgm20">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 1.5707963 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 1.5707963 0"/>
+        </collision>
+        <inertial>
+            <mass value="2.8"/>
+            <inertia ixx="0.0035" iyy="0.0048" izz="0.0048" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="up_bar">
+        <visual>
+            <geometry>
+                <cylinder length="0.25" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0.125" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.25" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0.125" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.102"/>
+            <inertia ixx="0.002128" iyy="0.002128" izz="0.000014" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="torso">
+        <visual>
+            <geometry>
+                <cylinder length="0.04" radius="0.1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.04" radius="0.1"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="2.5"/>
+            <inertia ixx="0.006583" iyy="0.006583" izz="0.125" iyz="0" ixz="0" ixy="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+
+    <!--left leg link body-->
+    <link name="left_rgm20">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="2.8"/>
+            <inertia ixx="0.0048" iyy="0.0035" izz="0.0048" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="left_thigh">
+        <visual>
+            <geometry>
+                <cylinder length="0.353" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.353" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.144"/>
+            <inertia ixx="0.0015" iyy="0.0015" izz="0.00002" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="left_knee_rgm14">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.4"/>
+            <inertia ixx="0.00192" iyy="0.00112" izz="0.00192" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="left_shank">
+        <visual>
+            <geometry>
+                <cylinder length="0.35" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.35" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.144"/>
+            <inertia ixx="0.0015" iyy="0.0015" izz="0.00002" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="left_ankle_rgm14">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.4"/>
+            <inertia ixx="0.00192" iyy="0.00112" izz="0.00192" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="left_foot">
+        <visual>
+            <geometry>
+                <box size="0.26 0.16 0.006"/>
+            </geometry>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.26 0.16 0.006"/>
+            </geometry>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.674"/>
+            <inertia ixx="0.001439" iyy="0.003798" izz="0.005234" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </inertial>
+        <contact_coefficients mu="10" kp="50" kd="50"/>
+    </link>
+
+    <!--right leg link body-->
+    <link name="right_rgm20">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="-1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.05"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="-1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="2.8"/>
+            <inertia ixx="0.0048" iyy="0.0035" izz="0.0048" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="right_thigh">
+        <visual>
+            <geometry>
+                <cylinder length="0.353" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.353" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.144"/>
+            <inertia ixx="0.0015" iyy="0.0015" izz="0.00002" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="right_knee_rgm14">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.4"/>
+            <inertia ixx="0.00192" iyy="0.00112" izz="0.00192" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="right_shank">
+        <visual>
+            <geometry>
+                <cylinder length="0.35" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.35" radius="0.013"/>
+            </geometry>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.144"/>
+            <inertia ixx="0.0015" iyy="0.0015" izz="0.00002" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 -0.175" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="right_ankle_rgm14">
+        <visual>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.108" radius="0.04"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5707963 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="1.4"/>
+            <inertia ixx="0.00192" iyy="0.00112" izz="0.00192" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </inertial>
+    </link>
+    <link name="right_foot">
+        <visual>
+            <geometry>
+                <box size="0.26 0.16 0.006"/>
+            </geometry>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.26 0.16 0.006"/>
+            </geometry>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </collision>
+        <inertial>
+            <mass value="0.674"/>
+            <inertia ixx="0.001439" iyy="0.003798" izz="0.005234" ixy="0" ixz="0" iyz="0"/>
+            <origin xyz="0.04 0 -0.03" rpy="0 0 0"/>
+        </inertial>
+        <contact_coefficients mu="10" kp="50" kd="50"/>
+    </link>
+
+    <!--joint, define the robot configuration-->
+    <!--upbody configureation, only one actuation degree-->
+    <joint name="pelvis_up_rgm20" type="fixed">
+        <parent link="pelvis"/>
+        <child link="up_rgm20"/>
+        <origin xyz="0 0 0.1325" rpy="0 0 0"/>
+    </joint>
+    <joint name="up_rgm20_up_bar" type="revolute">
+        <parent link="up_rgm20"/>
+        <child link="up_bar"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="20000.0" velocity="200" upper="3.14" lower="-3.14"/>
+    </joint>
+    <joint name="up_bar_torso" type="fixed">
+        <parent link="up_bar"/>
+        <child link="torso"/>
+        <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    </joint>
+
+    <!--left leg configuration, three actuation degree-->
+    <!--left thigh-->
+    <joint name="pelvis_left_hip" type="revolute">
+        <parent link="pelvis"/>
+        <child link="left_rgm20"/>
+        <origin xyz="0 0.1 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+    <joint name="left_hip_thigh" type="fixed">
+        <parent link="left_rgm20"/>
+        <child link="left_thigh"/>
+        <origin xyz="0 0 -0.1765" rpy="0 0 0"/>
+    </joint>
+    <joint name="left_hip_knee_rgm14" type="fixed">
+        <parent link="left_rgm20"/>
+        <child link="left_knee_rgm14"/>
+        <origin xyz="0 0 -0.115" rpy="0 0 0"/>
+    </joint>
+    <!--left shank-->
+    <joint name="left_knee" type="revolute">
+        <parent link="left_rgm20"/>
+        <child link="left_shank"/>
+        <origin xyz="0 0 -0.353" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+    <joint name="left_knee_ankle_rgm14" type="fixed">
+        <parent link="left_shank"/>
+        <child link="left_ankle_rgm14"/>
+        <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    </joint>
+    <joint name="left_ankle" type="revolute">
+        <parent link="left_shank"/>
+        <child link="left_foot"/>
+        <origin xyz="0 0 -0.35" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+
+    <!--right leg configuration, three actuation degree-->
+    <!--right thigh-->
+    <joint name="pelvis_right_hip" type="revolute">
+        <parent link="pelvis"/>
+        <child link="right_rgm20"/>
+        <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+        <axis xyz="0 -1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+    <joint name="right_hip_thigh" type="fixed">
+        <parent link="right_rgm20"/>
+        <child link="right_thigh"/>
+        <origin xyz="0 0 -0.1765" rpy="0 0 0"/>
+    </joint>
+    <joint name="right_hip_knee_rgm14" type="fixed">
+        <parent link="right_rgm20"/>
+        <child link="right_knee_rgm14"/>
+        <origin xyz="0 0 -0.115" rpy="0 0 0"/>
+    </joint>
+    <!--right shank-->
+    <joint name="right_knee" type="revolute">
+        <parent link="right_rgm20"/>
+        <child link="right_shank"/>
+        <origin xyz="0 0 -0.353" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+    <joint name="right_knee_ankle_rgm14" type="fixed">
+        <parent link="right_shank"/>
+        <child link="right_ankle_rgm14"/>
+        <origin xyz="0 0 -0.1" rpy="0 0 0"/>
+    </joint>
+    <joint name="right_ankle" type="revolute">
+        <parent link="right_shank"/>
+        <child link="right_foot"/>
+        <origin xyz="0 0 -0.35" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="1000" velocity="20" upper="3.14" lower="-3.14"/>
+    </joint>
+
+
+</robot>
